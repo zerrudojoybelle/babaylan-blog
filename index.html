@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Babaylan.blog — Stories of Powerful Filipina Women</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: { 50:'#f0f7f1',100:'#d8ebda',200:'#b3d7b7',300:'#82bc8a',400:'#549c60',500:'#357f43',600:'#236634',700:'#1b5230',800:'#143d24',900:'#0D2818',950:'#071A0E' },
+            gold: { 300:'#E8C96A',400:'#D4A843',500:'#C8A030',600:'#B08A20',700:'#8A6B15' },
+            cream: { 50:'#FDFBF7',100:'#F5F0E8',200:'#EDE5D5',300:'#E0D4BE',400:'#C8B89A' }
+          },
+          fontFamily: { display:['Playfair Display','serif'], body:['Lato','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Lato',sans-serif;background:#071A0E;color:#F5F0E8}
+    h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif}
+    ::-webkit-scrollbar{width:8px}
+    ::-webkit-scrollbar-track{background:#071A0E}
+    ::-webkit-scrollbar-thumb{background:#1b5230;border-radius:4px}
+    ::-webkit-scrollbar-thumb:hover{background:#236634}
+    .hero-section{position:relative;min-height:100vh;overflow:hidden}
+    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+    .hero-fallback{position:absolute;inset:0;z-index:0;background:linear-gradient(135deg,#071A0E 0%,#0D2818 30%,#143D24 60%,#0D2818 100%);background-size:400% 400%;animation:forestBreath 12s ease-in-out infinite}
+    @keyframes forestBreath{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+    .hero-fallback::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 80%,rgba(27,82,48,0.4) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(20,61,36,0.5) 0%,transparent 50%),radial-gradient(ellipse at 50% 50%,rgba(200,160,48,0.05) 0%,transparent 40%)}
+    .hero-fallback::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 30 L30 55 L5 30Z' fill='none' stroke='rgba(200,160,48,0.06)' stroke-width='0.8'/%3E%3Cpath d='M30 18 L42 30 L30 42 L18 30Z' fill='none' stroke='rgba(200,160,48,0.04)' stroke-width='0.5'/%3E%3C/svg%3E");background-size:60px 60px;opacity:.8}
+    .hero-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(7,26,14,0.15) 0%,rgba(7,26,14,0.35) 40%,rgba(7,26,14,0.9) 82%,rgba(7,26,14,0.98) 100%)}
+    .hero-content{position:relative;z-index:3}
+    .ethnic-divider{height:48px;position:relative;overflow:hidden;background:#0D2818}
+    .ethnic-divider svg{width:100%;height:100%}
+    .okir-decoration{width:120px;height:60px;opacity:.6}
+    .article-card{background:linear-gradient(145deg,rgba(13,40,24,0.8),rgba(7,26,14,0.9));border:1px solid rgba(27,82,48,0.3);border-radius:12px;overflow:hidden;transition:all .4s cubic-bezier(.4,0,.2,1);position:relative}
+    .article-card::before{content:'';position:absolute;inset:0;border-radius:12px;border:1px solid transparent;background:linear-gradient(145deg,rgba(200,160,48,0.2),transparent,rgba(200,160,48,0.1)) border-box;-webkit-mask:linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .4s ease}
+    .article-card:hover::before{opacity:1}
+    .article-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.4),0 0 30px rgba(200,160,48,0.05);border-color:rgba(200,160,48,0.2)}
+    .article-card img{transition:transform .6s cubic-bezier(.4,0,.2,1)}
+    .article-card:hover img{transform:scale(1.05)}
+    .featured-large{background:linear-gradient(160deg,rgba(13,40,24,0.9),rgba(7,26,14,0.95));border:1px solid rgba(27,82,48,0.4);border-radius:16px;overflow:hidden;transition:all .5s cubic-bezier(.4,0,.2,1)}
+    .featured-large:hover{box-shadow:0 25px 50px rgba(0,0,0,0.5),0 0 40px rgba(200,160,48,0.08);border-color:rgba(200,160,48,0.3)}
+    .share-btn{width:32px;height:32px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:rgba(27,82,48,0.4);border:1px solid rgba(27,82,48,0.5);color:#E0D4BE;transition:all .3s ease;cursor:pointer}
+    .share-btn:hover{background:rgba(200,160,48,0.2);border-color:rgba(200,160,48,0.4);color:#D4A843;transform:translateY(-2px)}
+    .category-pill{padding:8px 20px;border-radius:100px;background:rgba(13,40,24,0.8);border:1px solid rgba(27,82,48,0.4);color:#E0D4BE;font-size:14px;font-weight:400;transition:all .3s ease;cursor:pointer;white-space:nowrap}
+    .category-pill:hover,.category-pill.active{background:rgba(200,160,48,0.15);border-color:rgba(200,160,48,0.4);color:#D4A843}
+    .tag-badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;padding:4px 12px;border-radius:4px;background:rgba(200,160,48,0.15);color:#D4A843;border:1px solid rgba(200,160,48,0.25)}
+    .nav-glass{background:rgba(7,26,14,0.7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(27,82,48,0.2);transition:all .4s ease}
+    .nav-glass.scrolled{background:rgba(7,26,14,0.95);border-bottom-color:rgba(27,82,48,0.4)}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}
+    .article-modal{position:fixed;inset:0;z-index:100;background:rgba(7,26,14,0.95);backdrop-filter:blur(8px);overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .4s ease}
+    .article-modal.active{opacity:1;pointer-events:all}
+    .article-modal .modal-inner{transform:translateY(30px);transition:transform .5s cubic-bezier(.4,0,.2,1)}
+    .article-modal.active .modal-inner{transform:translateY(0)}
+    .mobile-menu{position:fixed;inset:0;z-index:90;background:rgba(7,26,14,0.98);backdrop-filter:blur(20px);opacity:0;pointer-events:none;transition:opacity .3s ease}
+    .mobile-menu.active{opacity:1;pointer-events:all}
+    .mobile-menu .menu-items{transform:translateX(-20px);transition:transform .4s ease}
+    .mobile-menu.active .menu-items{transform:translateX(0)}
+    .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);z-index:200;padding:12px 24px;border-radius:8px;background:rgba(200,160,48,0.2);border:1px solid rgba(200,160,48,0.4);color:#D4A843;font-size:14px;transition:transform .4s cubic-bezier(.4,0,.2,1);pointer-events:none}
+    .toast.show{transform:translateX(-50%) translateY(0)}
+    .weave-texture{background-image:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' fill='none'/%3E%3Cpath d='M0 20 L20 0 L40 20 L20 40Z' fill='none' stroke='rgba(200,160,48,0.04)' stroke-width='0.5'/%3E%3C/svg%3E")}
+    .section-pattern{background-image:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='80' height='80' fill='none'/%3E%3Cpath d='M40 8 L72 40 L40 72 L8 40Z' fill='none' stroke='rgba(200,160,48,0.05)' stroke-width='1'/%3E%3Cpath d='M40 22 L58 40 L40 58 L22 40Z' fill='none' stroke='rgba(200,160,48,0.04)' stroke-width='0.7'/%3E%3Ccircle cx='40' cy='40' r='4' fill='none' stroke='rgba(200,160,48,0.03)' stroke-width='0.5'/%3E%3C/svg%3E")}
+    .gold-line{width:48px;height:2px;background:linear-gradient(to right,#C8A030,transparent)}
+    .particle{position:absolute;border-radius:50%;pointer-events:none;background:rgba(200,160,48,0.15);animation:float linear infinite}
+    @keyframes float{0%{transform:translateY(0) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-100vh) rotate(720deg);opacity:0}}
+    .empty-state{text-align:center;padding:4rem 1rem}
+    .empty-state svg{margin:0 auto 1.5rem;opacity:.3}
+    .prose-custom .section-num{font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:rgba(200,160,48,0.15);line-height:1;margin-bottom:-1.5rem}
+    .prose-custom .disclaimer-box{border:1px solid rgba(200,160,48,0.2);border-radius:12px;padding:1.25rem 1.5rem;background:rgba(13,40,24,0.5);margin-top:2.5rem}
+    .prose-custom .disclaimer-box p{color:#C8B89A;font-size:.875rem;line-height:1.7;margin-bottom:0}
+  </style>
+</head>
+<body class="weave-texture">
+
+  <nav id="navbar" class="nav-glass fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group" onclick="closeModal();window.scrollTo({top:0,behavior:'smooth'});return false;">
+        <svg width="36" height="36" viewBox="0 0 36 36" class="text-gold-500 flex-shrink-0"><path d="M18 2L32 18 18 34 4 18Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M18 9L25 18 18 27 11 18Z" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6"/><circle cx="18" cy="18" r="3" fill="currentColor" opacity="0.4"/><line x1="18" y1="2" x2="18" y2="9" stroke="currentColor" stroke-width="0.8" opacity="0.4"/><line x1="32" y1="18" x2="25" y2="18" stroke="currentColor" stroke-width="0.8" opacity="0.4"/><line x1="18" y1="34" x2="18" y2="27" stroke="currentColor" stroke-width="0.8" opacity="0.4"/><line x1="4" y1="18" x2="11" y2="18" stroke="currentColor" stroke-width="0.8" opacity="0.4"/></svg>
+        <div class="flex flex-col leading-none"><span class="font-display text-lg font-semibold text-cream-100 tracking-wide group-hover:text-gold-400 transition-colors">BABAYLAN</span><span class="text-[10px] font-body text-gold-500 tracking-[0.25em] uppercase">.blog</span></div>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#featured" class="text-sm text-cream-300 hover:text-gold-400 transition-colors font-light tracking-wide">Articles</a>
+        <a href="#latest" class="text-sm text-cream-300 hover:text-gold-400 transition-colors font-light tracking-wide">Latest</a>
+        <a href="#categories" class="text-sm text-cream-300 hover:text-gold-400 transition-colors font-light tracking-wide">Categories</a>
+        <a href="#about" class="text-sm text-cream-300 hover:text-gold-400 transition-colors font-light tracking-wide">About</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="shareCurrentPage()" class="hidden sm:flex share-btn" title="Share"><span class="iconify" data-icon="lucide:share-2" data-width="15"></span></button>
+        <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-forest-800 transition-colors"><span class="iconify text-cream-200" data-icon="lucide:menu" data-width="20"></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="flex flex-col justify-center h-full px-8 menu-items">
+      <a href="#featured" onclick="toggleMobileMenu()" class="font-display text-3xl text-cream-100 mb-6 hover:text-gold-400 transition-colors">Articles</a>
+      <a href="#latest" onclick="toggleMobileMenu()" class="font-display text-3xl text-cream-100 mb-6 hover:text-gold-400 transition-colors">Latest</a>
+      <a href="#categories" onclick="toggleMobileMenu()" class="font-display text-3xl text-cream-100 mb-6 hover:text-gold-400 transition-colors">Categories</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="font-display text-3xl text-cream-100 mb-10 hover:text-gold-400 transition-colors">About</a>
+    </div>
+  </div>
+
+  <section class="hero-section flex items-end">
+    <video class="hero-video" autoplay muted loop playsinline poster="https://images.pexels.com/photos/37267763/pexels-photo-37267763.jpeg?auto=compress&cs=tinysrgb&w=1920">
+      <source src="https://videos.pexels.com/video-files/37267763/37267763-uhd_2560_1440_25fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/37267763/37267763-hd_1920_1080_25fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/37267763/37267763-sd_640_360_25fps.mp4" type="video/mp4">
+    </video>
+    <div class="hero-fallback" id="heroFallback">
+      <div class="particle" style="width:3px;height:3px;left:10%;bottom:-10px;animation-duration:15s"></div>
+      <div class="particle" style="width:2px;height:2px;left:25%;bottom:-10px;animation-duration:20s;animation-delay:3s"></div>
+      <div class="particle" style="width:4px;height:4px;left:45%;bottom:-10px;animation-duration:18s;animation-delay:6s"></div>
+      <div class="particle" style="width:2px;height:2px;left:65%;bottom:-10px;animation-duration:22s;animation-delay:2s"></div>
+      <div class="particle" style="width:3px;height:3px;left:80%;bottom:-10px;animation-duration:16s;animation-delay:8s"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content w-full max-w-7xl mx-auto px-4 sm:px-6 pb-16 md:pb-24 pt-32">
+      <div class="max-w-3xl">
+        <svg class="okir-decoration mb-6" viewBox="0 0 120 60" fill="none"><path d="M0 30 Q15 5,30 20 Q40 30,50 20 Q60 10,70 20 Q80 30,90 20 Q105 5,120 30" stroke="rgba(200,160,48,0.5)" stroke-width="1.5" fill="none"/><path d="M0 35 Q15 55,30 40 Q40 30,50 40 Q60 50,70 40 Q80 30,90 40 Q105 55,120 35" stroke="rgba(200,160,48,0.3)" stroke-width="1" fill="none"/><circle cx="60" cy="30" r="3" fill="rgba(200,160,48,0.4)"/></svg>
+        <span class="tag-badge mb-4 inline-block">Featured Story</span>
+        <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-cream-50 leading-[1.1] tracking-tight mb-6">The Invisible Foundation: Women's Contributions to the Cannabis Community of the Philippines</h1>
+        <p class="text-cream-300 text-base sm:text-lg font-light leading-relaxed mb-8 max-w-2xl">They were never just supporters. They were — and still are — the movement itself.</p>
+        <div class="flex flex-wrap items-center gap-4 mb-8">
+          <button onclick="openArticle(0)" class="px-8 py-3 bg-gold-500 text-forest-950 font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20">Read Story</button>
+          <div class="flex items-center gap-3">
+            <img src="https://picsum.photos/seed/belle-zerrudo/80/80.jpg" class="w-8 h-8 rounded-full border-2 border-forest-950 object-cover" alt="Belle Zerrudo">
+            <span class="text-cream-400 text-sm font-light">By Belle Zerrudo</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 text-xs text-cream-400 font-light">
+          <span>December 2024</span><span class="w-1 h-1 rounded-full bg-gold-600"></span><span>12 min read</span><span class="w-1 h-1 rounded-full bg-gold-600"></span><span>Advocacy & Action</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ethnic-divider">
+    <svg width="100%" height="48" viewBox="0 0 1200 48" preserveAspectRatio="none" fill="none">
+      <g stroke="rgba(200,160,48,0.35)" stroke-width="1" fill="none"><path d="M0 24L24 4 48 24 24 44Z"/><path d="M48 24L72 4 96 24 72 44Z"/><path d="M96 24L120 4 144 24 120 44Z"/><path d="M144 24L168 4 192 24 168 44Z"/><path d="M192 24L216 4 240 24 216 44Z"/><path d="M240 24L264 4 288 24 264 44Z"/><path d="M288 24L312 4 336 24 312 44Z"/><path d="M336 24L360 4 384 24 360 44Z"/><path d="M384 24L408 4 432 24 408 44Z"/><path d="M432 24L456 4 480 24 456 44Z"/><path d="M480 24L504 4 528 24 504 44Z"/><path d="M528 24L552 4 576 24 552 44Z"/><path d="M576 24L600 4 624 24 600 44Z"/><path d="M624 24L648 4 672 24 648 44Z"/><path d="M672 24L696 4 720 24 696 44Z"/><path d="M720 24L744 4 768 24 744 44Z"/><path d="M768 24L792 4 816 24 792 44Z"/><path d="M816 24L840 4 864 24 840 44Z"/><path d="M864 24L888 4 912 24 888 44Z"/><path d="M912 24L936 4 960 24 936 44Z"/><path d="M960 24L984 4 1008 24 984 44Z"/><path d="M1008 24L1032 4 1056 24 1032 44Z"/><path d="M1056 24L1080 4 1104 24 1080 44Z"/><path d="M1104 24L1128 4 1152 24 1128 44Z"/><path d="M1152 24L1176 4 1200 24 1176 44Z"/></g>
+      <g fill="rgba(200,160,48,0.2)" stroke="none"><circle cx="24" cy="24" r="2"/><circle cx="72" cy="24" r="2"/><circle cx="120" cy="24" r="2"/><circle cx="168" cy="24" r="2"/><circle cx="216" cy="24" r="2"/><circle cx="264" cy="24" r="2"/><circle cx="312" cy="24" r="2"/><circle cx="360" cy="24" r="2"/><circle cx="408" cy="24" r="2"/><circle cx="456" cy="24" r="2"/><circle cx="504" cy="24" r="2"/><circle cx="552" cy="24" r="2"/><circle cx="600" cy="24" r="2"/><circle cx="648" cy="24" r="2"/><circle cx="696" cy="24" r="2"/><circle cx="744" cy="24" r="2"/><circle cx="792" cy="24" r="2"/><circle cx="840" cy="24" r="2"/><circle cx="888" cy="24" r="2"/><circle cx="936" cy="24" r="2"/><circle cx="984" cy="24" r="2"/><circle cx="1032" cy="24" r="2"/><circle cx="1080" cy="24" r="2"/><circle cx="1128" cy="24" r="2"/><circle cx="1176" cy="24" r="2"/></g>
+      <line x1="0" y1="1" x2="1200" y2="1" stroke="rgba(200,160,48,0.15)" stroke-width="0.5"/><line x1="0" y1="47" x2="1200" y2="47" stroke="rgba(200,160,48,0.15)" stroke-width="0.5"/>
+    </svg>
+  </div>
+
+  <section id="featured" class="py-16 md:py-24 section-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center gap-4 mb-10 reveal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L22 12 12 22 2 12Z" stroke="#C8A030" stroke-width="1.5"/><path d="M12 7L17 12 12 17 7 12Z" stroke="#C8A030" stroke-width="0.8" opacity="0.5"/></svg><h2 class="font-display text-2xl sm:text-3xl font-medium text-cream-100 tracking-tight">Featured Stories</h2><div class="flex-1 gold-line ml-2"></div></div>
+      <div id="featuredArea"></div>
+    </div>
+  </section>
+
+  <div class="ethnic-divider" style="height:32px"><svg width="100%" height="32" viewBox="0 0 1200 32" preserveAspectRatio="none" fill="none"><line x1="0" y1="16" x2="1200" y2="16" stroke="rgba(200,160,48,0.12)" stroke-width="0.5" stroke-dasharray="8 8"/><g fill="rgba(200,160,48,0.15)"><circle cx="100" cy="16" r="2"/><circle cx="300" cy="16" r="2"/><circle cx="500" cy="16" r="2"/><circle cx="700" cy="16" r="2"/><circle cx="900" cy="16" r="2"/><circle cx="1100" cy="16" r="2"/></g></svg></div>
+
+  <section id="latest" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center gap-4 mb-10 reveal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L22 12 12 22 2 12Z" stroke="#C8A030" stroke-width="1.5"/><path d="M12 7L17 12 12 17 7 12Z" stroke="#C8A030" stroke-width="0.8" opacity="0.5"/></svg><h2 class="font-display text-2xl sm:text-3xl font-medium text-cream-100 tracking-tight">Latest Stories</h2><div class="flex-1 gold-line ml-2"></div></div>
+      <div id="latestGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <section id="categories" class="py-16 section-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center gap-4 mb-8 reveal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L22 12 12 22 2 12Z" stroke="#C8A030" stroke-width="1.5"/><path d="M12 7L17 12 12 17 7 12Z" stroke="#C8A030" stroke-width="0.8" opacity="0.5"/></svg><h2 class="font-display text-2xl sm:text-3xl font-medium text-cream-100 tracking-tight">Explore Topics</h2><div class="flex-1 gold-line ml-2"></div></div>
+      <div id="categoryPills" class="flex flex-wrap gap-3 reveal reveal-delay-1"></div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 md:py-28 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image:url('data:image/svg+xml,%3Csvg width=\"120\" height=\"120\" viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M60 10L110 60 60 110 10 60Z\" fill=\"none\" stroke=\"%23C8A030\" stroke-width=\"1\"/%3E%3Cpath d=\"M60 30L90 60 60 90 30 60Z\" fill=\"none\" stroke=\"%23C8A030\" stroke-width=\"0.7\"/%3E%3C/svg%3E');background-size:120px 120px"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+      <svg class="mx-auto mb-8 reveal" width="160" height="40" viewBox="0 0 160 40" fill="none"><path d="M0 20Q20 2,40 15Q50 20,60 15Q80 2,100 15Q110 20,120 15Q140 2,160 20" stroke="rgba(200,160,48,0.4)" stroke-width="1.2" fill="none"/><path d="M0 25Q20 40,40 27Q50 22,60 27Q80 40,100 27Q110 22,120 27Q140 40,160 25" stroke="rgba(200,160,48,0.25)" stroke-width="0.8" fill="none"/></svg>
+      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-medium text-cream-50 tracking-tight leading-tight mb-6 reveal">"Ang babae ay hindi lang <em class="text-gold-400 not-italic">liwanag</em> ng tahanan — siya ang <em class="text-gold-400 not-italic">apoy</em> ng buong komunidad."</h2>
+      <p class="text-cream-300 text-base sm:text-lg font-light leading-relaxed mb-4 reveal reveal-delay-1">A woman is not just the light of the home — she is the fire of the entire community.</p>
+      <p class="text-cream-400 text-sm font-light leading-relaxed mb-10 max-w-2xl mx-auto reveal reveal-delay-2">Babaylan.blog is a space for stories that honor the power, wisdom, and resilience of Filipina women and women in every community. Written by <strong class="text-cream-200">Belle Zerrudo</strong> — because our nanays, ate, and lola deserve to be remembered.</p>
+      <svg class="mx-auto mb-10 reveal reveal-delay-2" width="160" height="40" viewBox="0 0 160 40" fill="none"><path d="M0 20Q20 38,40 25Q50 20,60 25Q80 38,100 25Q110 20,120 25Q140 38,160 20" stroke="rgba(200,160,48,0.25)" stroke-width="0.8" fill="none"/><path d="M0 15Q20-2,40 12Q50 18,60 12Q80-2,100 12Q110 18,120 12Q140-2,160 15" stroke="rgba(200,160,48,0.4)" stroke-width="1.2" fill="none"/></svg>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal reveal-delay-3">
+        <a href="#latest" class="px-8 py-3 bg-gold-500 text-forest-950 font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20">Read More Stories</a>
+        <button onclick="shareCurrentPage()" class="px-8 py-3 border border-gold-600/40 text-gold-400 font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-gold-500/10 hover:border-gold-500/60 transition-all duration-300">Share Babaylan.blog</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-forest-800/60 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-1">
+          <a href="#" class="flex items-center gap-2 mb-4" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><svg width="28" height="28" viewBox="0 0 36 36" class="text-gold-500 flex-shrink-0"><path d="M18 2L32 18 18 34 4 18Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M18 9L25 18 18 27 11 18Z" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6"/><circle cx="18" cy="18" r="3" fill="currentColor" opacity="0.4"/></svg><div class="flex flex-col leading-none"><span class="font-display text-base font-semibold text-cream-100">BABAYLAN</span><span class="text-[9px] font-body text-gold-500 tracking-[0.25em] uppercase">.blog</span></div></a>
+          <p class="text-cream-400 text-sm font-light leading-relaxed mb-3">Stories of powerful Filipina women and women in every community.</p>
+          <div class="flex items-center gap-2"><img src="https://picsum.photos/seed/belle-zerrudo/60/60.jpg" class="w-7 h-7 rounded-full object-cover border border-forest-700" alt=""><div><p class="text-cream-200 text-xs font-medium">Belle Zerrudo</p><p class="text-cream-500 text-[10px]">Writer & Creator</p></div></div>
+        </div>
+        <div><h4 class="font-display text-sm font-medium text-cream-200 mb-4 uppercase tracking-wider">Explore</h4><ul class="space-y-2"><li><a href="#featured" class="text-cream-400 text-sm font-light hover:text-gold-400 transition-colors">Featured Stories</a></li><li><a href="#latest" class="text-cream-400 text-sm font-light hover:text-gold-400 transition-colors">Latest Articles</a></li><li><a href="#categories" class="text-cream-400 text-sm font-light hover:text-gold-400 transition-colors">Categories</a></li><li><a href="#about" class="text-cream-400 text-sm font-light hover:text-gold-400 transition-colors">About</a></li></ul></div>
+        <div><h4 class="font-display text-sm font-medium text-cream-200 mb-4 uppercase tracking-wider">Topics</h4><ul id="footerTopics" class="space-y-2"></ul></div>
+        <div><h4 class="font-display text-sm font-medium text-cream-200 mb-4 uppercase tracking-wider">Connect</h4><div class="flex gap-3 mb-4"><a href="#" class="share-btn !w-10 !h-10"><span class="iconify" data-icon="lucide:facebook" data-width="16"></span></a><a href="#" class="share-btn !w-10 !h-10"><span class="iconify" data-icon="lucide:twitter" data-width="16"></span></a><a href="#" class="share-btn !w-10 !h-10"><span class="iconify" data-icon="lucide:instagram" data-width="16"></span></a><a href="#" class="share-btn !w-10 !h-10"><span class="iconify" data-icon="lucide:youtube" data-width="16"></span></a></div><p class="text-cream-500 text-xs font-light">Want to share your story?<br><a href="mailto:hello@babaylan.blog" class="text-gold-500 hover:text-gold-400 transition-colors">hello@babaylan.blog</a></p></div>
+      </div>
+      <div class="border-t border-forest-800/40 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-cream-500 text-xs font-light">© 2024 Babaylan.blog by Belle Zerrudo. All rights reserved. Made with 🤎 for Filipina women everywhere.</p>
+        <div class="flex items-center gap-4"><a href="#" class="text-cream-500 text-xs font-light hover:text-cream-300 transition-colors">Privacy</a><a href="#" class="text-cream-500 text-xs font-light hover:text-cream-300 transition-colors">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+  <div class="text-center py-4 border-t border-forest-800/30"><p class="text-cream-600 text-[10px] font-light">Hero video: <a href="https://www.pexels.com/video/lush-green-grass-swaying-in-the-breeze-37267763/" target="_blank" class="text-cream-500 hover:text-gold-500 transition-colors">Lush green grass swaying in the breeze</a> by Nikola Kojević via <a href="https://www.pexels.com" target="_blank" class="text-cream-500 hover:text-gold-500 transition-colors">Pexels</a></p></div>
+
+  <div id="articleModal" class="article-modal"><div class="modal-inner max-w-3xl mx-auto px-4 sm:px-6 py-8 md:py-16"><button onclick="closeModal()" class="fixed top-5 right-5 z-10 w-10 h-10 rounded-full bg-forest-900/80 border border-forest-700 flex items-center justify-center text-cream-300 hover:text-gold-400 hover:border-gold-600/40 transition-all"><span class="iconify" data-icon="lucide:x" data-width="18"></span></button><div id="modalContent"></div></div></div>
+  <div id="toast" class="toast"><span id="toastMsg">Link copied!</span></div>
+
+  <script>
+    const AUTHOR_NAME = "Belle Zerrudo";
+    const AUTHOR_IMG = "https://picsum.photos/seed/belle-zerrudo/60/60.jpg";
+    const MURAL_IMG = "https://z-cdn-media.chatglm.cn/files/74a961d8-273d-4b85-8b47-d53ed8464722.jpg?auth_key=1878593473-05b8e0fd21a342cda9f29f05b83f2e0e-0-8b0689b932d11b756929d492e11934dc";
+
+    const articles = [
+      {
+        id: 0,
+        title: "The Invisible Foundation: Women's Contributions to the Cannabis Community of the Philippines",
+        category: "Advocacy & Action",
+        date: "December 2024",
+        readTime: "12 min read",
+        image: MURAL_IMG,
+        cardImage: MURAL_IMG,
+        excerpt: "They were never just supporters. They were — and still are — the movement itself. A look at the mothers, scientists, community builders, and policy fighters who built the Philippine medical cannabis advocacy movement from the ground up.",
+        body: `
+          <p>There is a quiet kind of strength that does not make the front page. It does not hold a press conference or give a speech at a rally. Instead, it shows up at government hearings with folders full of research. It stays up past midnight in Facebook groups, answering questions from desperate parents. It writes letters, files petitions, and keeps going even when the Senate does not call back.</p>
+
+          <p>In the Philippine cannabis advocacy movement, that strength has a face — and more often than not, it is a woman's. Long before medical cannabis became a mainstream conversation in this country, Filipino women were already in the thick of it. They stepped up as mothers fighting for their sick children, as scientists demanding evidence-based policy, and as community builders making sure no family had to navigate the system alone.</p>
+
+          <p>Their contributions are not a footnote to this story. <strong>They are the story.</strong></p>
+
+          <p class="section-num">01</p>
+          <h3>The Mothers Who Started It All</h3>
+
+          <p>Ask anyone who has been part of Philippine cannabis advocacy for more than five years, and they will tell you the same thing: <strong>the mothers came first.</strong> Long before any bill was filed in Congress, it was nanay after nanay sharing their children's stories in online groups and hospital corridors. They were quietly building the groundwork for what would become a national conversation.</p>
+
+          <p><strong>Dr. Donnabel Cunanan</strong>, a dentist and co-founder of the Philippine Cannabis Compassion Society (PCCS) — also known as Cannahopefuls Inc. — is one of the most recognizable faces of this movement. Her daughter was diagnosed with Dravet Syndrome, a severe form of epilepsy that caused more than 50 seizures a day. When conventional medicine ran out of answers, she turned to research. That research led her to cannabis, and eventually, to advocacy. Dr. Cunanan noted that cannabis helps patients lead an improved quality of life, with less organ toxicity or side effects compared to conventional medicines.</p>
+
+          <p>She was not alone. Across the country, other mothers were having the same realization at the same desperate hour. The stakes were incredibly high. One mother lost her son, Igi, in December 2016. He was a young boy with cancer whose health briefly improved with cannabis before an unreliable illegal supply ran out. Her grief became fuel. She joined "Moms for Medical Marijuana," a collective of mothers who refused to let their children's stories end without meaning.</p>
+
+          <p><em>Naging advocates sila dahil wala nang ibang pagpipilian</em> — they became advocates because they had no other choice. And that, perhaps, is what makes their persistence so remarkable. The heartbreak of discovering a potential solution too late only deepened their resolve to ensure no other family experienced the same loss.</p>
+
+          <p class="section-num">02</p>
+          <h3>The Scientists Who Built the Case</h3>
+
+          <p>Passion alone does not change policy. What the movement needed — and what women helped provide — was <strong>science</strong>. The advocacy required rigorous, credible, peer-reviewed science that could stand up in Congress and in the pages of medical journals.</p>
+
+          <p>Enter <strong>Dr. Annabelle Manalo-Morgan</strong>, a Cell and Developmental Biologist, author, and founder of Masaya Medical Inc. A Filipino-Canadian based in North America, with parents from Batangas and Laguna, Dr. Manalo-Morgan authored "Mighty Flower: How Cannabis Saved My Son." The book is a deeply personal account of how CBD helped her infant son, Macario, who had 38 percent of his brain removed due to catastrophic seizures. She went on to serve as lead scientific officer of Flora Growth and collaborated with UP Diliman on cannabis research.</p>
+
+          <p>Her framing of the issue cuts through the noise. She asks us to think of the marijuana plant like we think of the fungus that gave us penicillin — just a regular old plant with some marvelous healing benefits. That is not the language of a lobbyist. That is the language of a scientist who has done the work and is asking the rest of us to catch up.</p>
+
+          <p class="section-num">03</p>
+          <h3>The Community Builders Nobody Talks About</h3>
+
+          <p>For every woman who testified in Congress or published a paper, there are ten more doing the work that does not get photographed. <em>Ang mga babaeng ito ang nagpapatakbo ng movement sa likod ng eksena</em> — these women run the movement behind the scenes.</p>
+
+          <p>Their daily contributions are the lifeblood of the community:</p>
+
+          <p>They run the support group chats where parents share dosage information and supplier warnings at 2 in the morning. They accompany first-time applicants through the Food and Drug Administration's Compassionate Special Permit (CSP) process — a bureaucratic maze that is difficult to navigate even for educated, resourced families. They translate dense legal language into plain Filipino for people who are already overwhelmed by illness and fear.</p>
+
+          <p>This is the kind of community care that Filipino women have always provided — the "ate" energy, the "lola" wisdom, the kapitbahay who shows up before you even have to ask. In the cannabis advocacy space, that same spirit is alive and essential.</p>
+
+          <p class="section-num">04</p>
+          <h3>The Policy Fighters Who Kept Knocking</h3>
+
+          <p>The legal reality in the Philippines is difficult to ignore. Under Republic Act 9165, the Comprehensive Dangerous Drugs Act of 2002, cannabis remains a controlled substance with severe penalties. But the legislative tide, slowly, is turning — and women have been knocking on that door since the beginning.</p>
+
+          <p><strong>Leah Paquiz</strong>, a co-author of the original House Bill for medical cannabis back in 2014, put the case simply and humanely, stating that Filipinos who need care should be given compassionate care. That early bill did not pass, but the women did not stop.</p>
+
+          <p>By 2025, the landscape looks different. The House of Representatives has approved HB 10439, which would legalize certain medical cannabis products. The Department of Health has expressed support. The newly formed "CannAlliance PH" — an umbrella coalition of advocacy groups — is spearheaded by women leaders from member organizations across the country. They signed a covenant, made it formal, and became the force that united the movement. <em>Sila ang nagbuklod ng kilusan.</em></p>
+
+          <p class="section-num">05</p>
+          <h3>Fighting the Stigma, One Conversation at a Time</h3>
+
+          <p>Perhaps the most exhausting battle of all is the one fought not in Congress but in living rooms, family chats, and barangay conversations. The stigma around cannabis in the Philippines runs deep, shaped by decades of drug war rhetoric and cultural conservatism.</p>
+
+          <p>Filipino women advocates have fought this with the most powerful tool available to them: <strong>their own stories.</strong> They shared their children's faces. They described their sleepless nights. They showed up on TV interviews visibly scared, visibly grieving, and visibly determined. They did not ask for permission to speak; they just spoke.</p>
+
+          <p>The goal, as many of them have said, has never been to glamorize cannabis. It has always been about education — giving Filipino families accurate information so they can make informed decisions with their doctors, without fear, without shame, and ideally, within the law.</p>
+
+          <p><em>Hindi sila naghanap ng spotlight. Naghanap sila ng solusyon — at naging boses sila para sa lahat.</em></p>
+
+          <p class="section-num" style="font-size:1rem;color:rgba(200,160,48,0.3);letter-spacing:0.3em;margin-bottom:1.5rem;margin-top:3rem">● ● ●</p>
+
+          <p>Medical cannabis reform in the Philippines is not yet law. The Senate still needs to act, and political winds shift. But the movement is closer to the finish line than it has ever been. When that day comes, the women who built this from grief, from science, from community, and from sheer <em>tiyaga</em> deserve to be remembered not as supporters of the cause, but as <strong>its foundation</strong>.</p>
+
+          <div class="disclaimer-box">
+            <p><strong>Disclaimer:</strong> This article is for informational and community purposes. Cannabis remains regulated under Republic Act 9165. Individuals named are public figures with documented public advocacy. This article does not encourage illegal activity.</p>
+          </div>
+        `
+      }
+    ];
+
+    function emptyState(msg){return `<div class="empty-state col-span-full"><svg width="64" height="64" viewBox="0 0 64 64" fill="none"><path d="M32 4L60 32 32 60 4 32Z" stroke="rgba(200,160,48,0.3)" stroke-width="1.5"/><path d="M32 18L46 32 32 46 18 32Z" stroke="rgba(200,160,48,0.2)" stroke-width="1"/><circle cx="32" cy="32" r="4" fill="rgba(200,160,48,0.15)"/></svg><p class="text-cream-400 font-light text-lg mb-2">${msg}</p><p class="text-cream-500 text-sm font-light">Stories are coming soon.</p></div>`;}
+
+    const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>50));
+    let mobileMenuOpen=false;function toggleMobileMenu(){mobileMenuOpen=!mobileMenuOpen;document.getElementById('mobileMenu').classList.toggle('active',mobileMenuOpen);document.body.style.overflow=mobileMenuOpen?'hidden':'';}
+
+    function renderFeatured(){const area=document.getElementById('featuredArea');const feat=articles.slice(0,4);if(!feat.length){area.innerHTML=emptyState('No featured stories yet');return;}let html='<div class="grid grid-cols-1 lg:grid-cols-5 gap-6">';if(feat[0]){const a=feat[0];html+=`<div class="lg:col-span-3 reveal"><div class="featured-large cursor-pointer group" onclick="openArticle(${a.id})"><div class="relative overflow-hidden aspect-[16/10]"><img src="${a.cardImage||a.image}" alt="Progress of Medicine in the Philippines mural" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/40 to-transparent"></div><div class="absolute top-4 left-4"><span class="tag-badge">${a.category}</span></div><div class="absolute bottom-0 left-0 right-0 p-5 sm:p-6"><h3 class="font-display text-xl sm:text-2xl font-medium text-cream-50 leading-snug mb-3 group-hover:text-gold-300 transition-colors">${a.title}</h3><p class="text-cream-300 text-sm font-light leading-relaxed mb-4 line-clamp-2">${a.excerpt}</p><div class="flex items-center justify-between flex-wrap gap-3"><div class="flex items-center gap-3"><img src="${AUTHOR_IMG}" class="w-7 h-7 rounded-full object-cover border border-forest-700" alt=""><div><span class="text-cream-200 text-xs font-medium">${AUTHOR_NAME}</span><span class="text-cream-400 text-xs ml-2">${a.date}</span></div></div><div class="flex gap-2"><button onclick="event.stopPropagation();shareArticle('facebook','Invisible Foundation')" class="share-btn !w-7 !h-7"><span class="iconify" data-icon="lucide:facebook" data-width="12"></span></button><button onclick="event.stopPropagation();shareArticle('twitter','Invisible Foundation')" class="share-btn !w-7 !h-7"><span class="iconify" data-icon="lucide:twitter" data-width="12"></span></button><button onclick="event.stopPropagation();copyLink()" class="share-btn !w-7 !h-7"><span class="iconify" data-icon="lucide:link" data-width="12"></span></button></div></div></div></div></div></div>`;}html+='<div class="lg:col-span-2 flex flex-col gap-6">';for(let i=1;i<4;i++){if(!feat[i])continue;const a=feat[i];html+=`<div class="article-card cursor-pointer group flex-1 reveal reveal-delay-${i}" onclick="openArticle(${a.id})"><div class="flex h-full"><div class="relative overflow-hidden w-32 sm:w-40 flex-shrink-0"><img src="${a.cardImage||a.image}" alt="" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-r from-transparent to-forest-950/80 hidden sm:block"></div></div><div class="p-4 sm:p-5 flex flex-col justify-between flex-1 min-w-0"><div><span class="tag-badge text-[9px] mb-2 inline-block">${a.category}</span><h3 class="font-display text-base sm:text-lg font-medium text-cream-100 leading-snug mb-2 group-hover:text-gold-300 transition-colors line-clamp-2">${a.title}</h3><p class="text-cream-400 text-xs font-light leading-relaxed line-clamp-2 hidden sm:block">${a.excerpt}</p></div><div class="flex items-center gap-2 mt-3"><img src="${AUTHOR_IMG}" class="w-5 h-5 rounded-full object-cover" alt=""><span class="text-cream-400 text-[11px]">${AUTHOR_NAME.split(' ')[0]} · ${a.date.split(' ').slice(0,2).join(' ')}</span></div></div></div></div>`;}html+='</div></div>';area.innerHTML=html;area.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));}
+
+    function renderLatestGrid(fc){const g=document.getElementById('latestGrid');let l=articles.slice(4);if(fc&&fc!=='All Stories')l=l.filter(a=>a.category===fc);if(!l.length){g.innerHTML=emptyState(fc&&fc!=='All Stories'?'No articles in this category yet':'No stories yet — check back soon');return;}g.innerHTML=l.map((a,i)=>`<div class="article-card cursor-pointer group reveal ${i<3?'reveal-delay-'+(i+1):''}" onclick="openArticle(${a.id})"><div class="relative overflow-hidden aspect-[4/3]"><img src="${a.cardImage||a.image}" alt="" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-forest-950/90 via-transparent to-transparent"></div><div class="absolute top-3 left-3"><span class="tag-badge text-[9px]">${a.category}</span></div></div><div class="p-5"><h3 class="font-display text-lg font-medium text-cream-100 leading-snug mb-2 group-hover:text-gold-300 transition-colors">${a.title}</h3><p class="text-cream-400 text-sm font-light leading-relaxed mb-4 line-clamp-3">${a.excerpt}</p><div class="flex items-center justify-between"><div class="flex items-center gap-2"><img src="${AUTHOR_IMG}" class="w-6 h-6 rounded-full object-cover" alt=""><span class="text-cream-400 text-xs">${AUTHOR_NAME.split(' ')[0]} · ${a.date.split(' ').slice(0,2).join(' ')}</span></div><div class="flex gap-1.5"><button onclick="event.stopPropagation();shareArticle('facebook','${a.title.replace(/'/g,"\\'")}')" class="share-btn !w-6 !h-6"><span class="iconify" data-icon="lucide:facebook" data-width="10"></span></button><button onclick="event.stopPropagation();shareArticle('twitter','${a.title.replace(/'/g,"\\'")}')" class="share-btn !w-6 !h-6"><span class="iconify" data-icon="lucide:twitter" data-width="10"></span></button><button onclick="event.stopPropagation();copyLink()" class="share-btn !w-6 !h-6"><span class="iconify" data-icon="lucide:link" data-width="10"></span></button></div></div></div></div>`).join('');g.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));}
+
+    function renderCategories(){const cats=['All Stories',...new Set(articles.map(a=>a.category))];const pillBox=document.getElementById('categoryPills');const footerBox=document.getElementById('footerTopics');if(cats.length<=1){pillBox.innerHTML='<span class="text-cream-500 text-sm font-light italic">Categories will appear once you add more articles</span>';footerBox.innerHTML='';return;}pillBox.innerHTML=cats.map(c=>`<button class="category-pill ${c==='All Stories'?'active':''}" onclick="filterCategory(this,'${c}')">${c}</button>`).join('');footerBox.innerHTML=cats.slice(1).map(c=>`<li><a href="#" class="text-cream-400 text-sm font-light hover:text-gold-400 transition-colors">${c}</a></li>`).join('');}
+
+    function filterCategory(el,cat){document.querySelectorAll('.category-pill').forEach(p=>p.classList.remove('active'));el.classList.add('active');renderLatestGrid(cat);if(cat!=='All Stories')showToast('Showing: '+cat);}
+
+    const revealObserver=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+    const modal=document.getElementById('articleModal'),modalContent=document.getElementById('modalContent');
+    function openArticle(id){const a=articles.find(x=>x.id===id);if(!a)return;const s=a.title.replace(/'/g,"\\'");modalContent.innerHTML=`<div class="mb-8"><span class="tag-badge mb-4 inline-block">${a.category}</span><h1 class="font-display text-2xl sm:text-3xl md:text-4xl font-medium text-cream-50 leading-tight tracking-tight mb-4">${a.title}</h1><div class="flex flex-wrap items-center gap-4 text-sm text-cream-400 font-light"><div class="flex items-center gap-2"><img src="${AUTHOR_IMG}" class="w-8 h-8 rounded-full object-cover border border-forest-700" alt=""><span class="text-cream-200 text-sm font-medium">${AUTHOR_NAME}</span></div><span>${a.date}</span><span class="w-1 h-1 rounded-full bg-gold-600"></span><span>${a.readTime}</span></div></div><div class="rounded-xl overflow-hidden mb-8 aspect-[2/1]"><img src="${a.image}" alt="Progress of Medicine in the Philippines mural" class="w-full h-full object-cover"></div><div class="flex items-center gap-3 mb-8 pb-6 border-b border-forest-800/40"><span class="text-cream-400 text-xs uppercase tracking-wider font-medium">Share this story:</span><button onclick="shareArticle('facebook','${s}')" class="share-btn"><span class="iconify" data-icon="lucide:facebook" data-width="14"></span></button><button onclick="shareArticle('twitter','${s}')" class="share-btn"><span class="iconify" data-icon="lucide:twitter" data-width="14"></span></button><button onclick="copyLink()" class="share-btn"><span class="iconify" data-icon="lucide:link" data-width="14"></span></button></div><div class="prose-custom text-cream-200 text-base font-light leading-relaxed">${a.body}</div><div class="mt-12 pt-6 border-t border-forest-800/40 flex items-center justify-between flex-wrap gap-4"><div class="flex items-center gap-3"><img src="${AUTHOR_IMG}" class="w-10 h-10 rounded-full object-cover border border-forest-700" alt=""><div><p class="text-cream-200 text-sm font-medium">${AUTHOR_NAME}</p><p class="text-cream-500 text-xs">Writer & Creator, Babaylan.blog</p></div></div><div class="flex gap-2"><button onclick="shareArticle('facebook','${s}')" class="share-btn"><span class="iconify" data-icon="lucide:facebook" data-width="14"></span></button><button onclick="shareArticle('twitter','${s}')" class="share-btn"><span class="iconify" data-icon="lucide:twitter" data-width="14"></span></button><button onclick="copyLink()" class="share-btn"><span class="iconify" data-icon="lucide:link" data-width="14"></span></button></div></div>`;if(document.getElementById('abs-style'))document.getElementById('abs-style').remove();const st=document.createElement('style');st.id='abs-style';st.textContent='.prose-custom h3{font-family:"Playfair Display",serif;font-size:1.375rem;font-weight:600;color:#F5F0E8;margin-top:2.5rem;margin-bottom:.75rem;line-height:1.3}.prose-custom p{margin-bottom:1.25rem;color:#E0D4BE}.prose-custom strong{color:#F5F0E8;font-weight:600}.prose-custom em{color:#D4A843;font-style:italic}';document.head.appendChild(st);modal.classList.add('active');document.body.style.overflow='hidden';modal.scrollTop=0;}
+    function closeModal(){modal.classList.remove('active');document.body.style.overflow='';}
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+    function shareArticle(p,t){const u=window.location.href,tx=`"${t}" — Babaylan.blog by Belle Zerrudo`;if(p==='facebook')window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(u)+'&quote='+encodeURIComponent(tx),'_blank','width=600,height=400');else if(p==='twitter')window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(tx)+'&url='+encodeURIComponent(u),'_blank','width=600,height=400');}
+    function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>showToast('Link copied to clipboard!')).catch(()=>showToast('Could not copy link'));}
+    function shareCurrentPage(){if(navigator.share)navigator.share({title:'Babaylan.blog',text:'The Invisible Foundation — Stories of Powerful Filipina Women',url:window.location.href}).catch(()=>{});else copyLink();}
+    function showToast(msg){const t=document.getElementById('toast');document.getElementById('toastMsg').textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});});
+    const videoEl=document.querySelector('.hero-video'),fallbackEl=document.getElementById('heroFallback');if(videoEl){videoEl.addEventListener('canplay',()=>{if(fallbackEl)fallbackEl.style.display='none';});videoEl.addEventListener('error',()=>{if(fallbackEl)fallbackEl.style.display='';});}
+    renderFeatured();renderLatestGrid();renderCategories();
+  </script>
+</body>
+</html>
